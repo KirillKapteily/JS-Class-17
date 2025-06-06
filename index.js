@@ -12,8 +12,8 @@ navYe.style.backgroundColor = 'yellow';
 // linkText.style.fontSize = '56px';
 
 //3
-// let linkLone = document.querySelector('a');
-// link.classList.add('site-nav__link')
+let linkLone = document.querySelector('a');
+linkLone.classList.add('site-nav__link')
 
 // //4
 // let leer = document.querySelector('a[href ^= "https://"]');
@@ -26,8 +26,52 @@ leero.forEach(element => {
 });
 
 //6
+let title = document.querySelector('h1');
+title.textContent = 'TAYLOR SWIFT';
+title.classList.add('olo');
+// olo.style.backgroundColor = 'green';
+title.classList.replace('olo', 'color');
 
-console.log("");
+let listCheck = document.querySelector('a');
+listCheck.classList.contains('list');
+console.log(listCheck.classList.contains('list'));
 
-let trun2 = 5;
-console.log(trun2);
+//7 calc
+
+let num1 = document.querySelector("#num1");
+let num2 = document.querySelector("#num2");
+let result = document.querySelector("res")
+
+function calculate(operation) {
+    // Get the values from the input elements and parse them as numbers
+    let a = parseFloat(num1.value);
+    let b = parseFloat(num2.value);
+    let result;
+
+    switch (operation) {
+        case '+':
+            result = a + b;
+            break;
+
+        case '-':
+            result = a - b;
+            break;
+
+        case '*':
+            result = a * b;
+            break;
+
+        case '/':
+            result = a / b;
+            break;
+
+        default:
+            result = 'Invalid operation';
+            break;
+    }
+
+    console.log(result);
+}
+
+
+calculate();
